@@ -1,0 +1,57 @@
+{
+  "SchemaVersion": "1.0.0",
+  "Id": "lightbulb-01",
+  "Version": "0.0.1",
+  "Name": "Lightbulb",
+  "Description": "Smart lightbulb device.",
+  "Protocol": "MQTT",
+  "Simulation": {
+    "InitialState": {
+      "online": true,
+      "temperature": 200.0,
+      "temperature_unit": "F",
+      "status": "on"
+    },
+    "Script": {
+      "Type": "javascript",
+      "Path": "lightbulb-01-state.js",
+      "Interval": "00:00:20"
+    }
+  },
+  "Properties": {
+    "Type": "Lightbulb",
+    "Color": "White",
+    "Brightness": 75,
+    "EstimatedRemainingLife": 10000
+  },
+  "Tags": {
+    "Location": "Building 2",
+    "Floor": "2",
+    "Campus": "Redmond"
+  },
+  "Telemetry": [
+    {
+      "Interval": "00:00:20",
+      "MessageTemplate": "{\"temperature\":${temperature},\"temperature_unit\":\"${temperature_unit}\",\"status\":\"${status}\"}",
+      "MessageSchema": {
+        "Name": "lightbulb-status;v1",
+        "Format": "JSON",
+        "Fields": {
+          "temperature": "double",
+          "temperature_unit": "text",
+          "status": "text"
+        }
+      }
+    }
+  ],
+  "CloudToDeviceMethods": {
+    "SwitchOn": {
+      "Type": "javascript",
+      "Path": "SwitchOn-method.js"
+    },
+    "SwitchOff": {
+      "Type": "javascript",
+      "Path": "SwitchOff-method.js"
+    }
+  }
+}
