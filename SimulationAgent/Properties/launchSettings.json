@@ -4,7 +4,7 @@
       "commandName": "Project",
       "environmentVariables": {
         "PCS_STORAGEADAPTER_WEBSERVICE_URL": "http://localhost:9022/v1",
-        "PCS_IOTHUB_CONNSTRING": "EnterHubConnString"
+        "PCS_IOTHUB_CONNSTRING": "HostName=demo-battery-monitoring73368.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=Xi9M2bhTalsyERg4+wgrNliu87pwhiAaaT8iDB+XVrU="
       }
     }
   }

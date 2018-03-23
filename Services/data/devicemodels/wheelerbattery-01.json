@@ -1,0 +1,74 @@
+{
+  "SchemaVersion": "1.0.0",
+  "Id": "wheelerbattery-01",
+  "Version": "0.0.1",
+  "Name": "WheelerBattery",
+  "Description": "Wheeler smart battery device.",
+  "Protocol": "MQTT",
+  "Simulation": {
+    "InitialState": {
+      "online": true,
+      "status": "on",
+      "speed": 100.0,
+      "speed_unit": "F",
+      "ODO": 110.0,
+      "ODO_unit": "KM",
+      "InternalBatteryVoltage": 4.2,
+      "InternalBatteryVoltage_unit": "V",
+      "GSMSignalStrength": 17,
+      "latitude": 28.43380167,
+      "longitude": 77.08016000
+    },
+    "Script": {
+      "Type": "javascript",
+      "Path": "wheelerbattery-01-state.js",
+      "Interval": "00:00:10"
+    }
+  },
+  "Properties": {
+    "Type": "WheelerBattery",
+    "IMEI": "",
+    "CellID": "",
+    "Firmware": "1.0",
+    "Model": "WB101",
+    "Location": "Station 2",
+    "EstimatedRemainingLife": 10000
+  },
+  "Tags": {
+    "Location": "Station 2",
+    "Floor": "1",
+    "Campus": "Bangalore"
+  },
+  "Telemetry": [
+    {
+      "Interval": "00:00:05",
+      "MessageTemplate": "{\"status\":\"${status}\",\"speed\":${speed},\"speed_unit\":\"${speed_unit}\",\"ODO\":${ODO},\"ODO_unit\":\"${ODO_unit}\",\"InternalBatteryVoltage\":${InternalBatteryVoltage},\"InternalBatteryVoltage_unit\":\"${InternalBatteryVoltage_unit}\",\"GSMSignalStrength\":\"${GSMSignalStrength}\",\"latitude\":\"${latitude}\",\"longitude\":\"${longitude}\"}",
+      "MessageSchema": {
+        "Name": "lightbulb-status;v1",
+        "Format": "JSON",
+        "Fields": {
+          "status": "text",
+          "speed": "double",
+          "speed_unit": "text",
+          "ODO": "double",
+          "ODO_unit": "text",
+          "InternalBatteryVoltage": "double",
+          "InternalBatteryVoltage_unit": "text",
+          "GSMSignalStrength": "integer",
+          "latitude": "double",
+          "longitude": "double"
+        }
+      }
+    }
+  ],
+  "CloudToDeviceMethods": {
+    "SwitchOn": {
+      "Type": "javascript",
+      "Path": "SwitchOn-method.js"
+    },
+    "SwitchOff": {
+      "Type": "javascript",
+      "Path": "SwitchOff-method.js"
+    }
+  }
+}

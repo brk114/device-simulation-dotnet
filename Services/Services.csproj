@@ -32,6 +32,15 @@
     <None Update="data\devicemodels\engine-02.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="data\devicemodels\scripts\wheelerbattery-01-state.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="data\devicemodels\wheelerbattery-01.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="data\devicemodels\lightbulb-01.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="data\devicemodels\prototype-01.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -44,6 +53,9 @@
     <None Update="data\devicemodels\scripts\FillTank-method.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="data\devicemodels\scripts\lightbulb-01-state.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="data\devicemodels\scripts\RestartEngine-method.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -55,6 +67,12 @@
     </None>
     <None Update="data\devicemodels\scripts\StopElevator-method.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="data\devicemodels\scripts\SwitchOff-method.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="data\devicemodels\scripts\SwitchOn-method.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="data\devicemodels\scripts\TempIncrease-method.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
