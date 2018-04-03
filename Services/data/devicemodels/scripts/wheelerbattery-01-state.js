@@ -70,19 +70,19 @@ function main(context, previousState) {
 	// the telemetry can apply changes using the previous function state.
 	restoreState(previousState);
 
-	state.speed = vary(80, 5, 10, 150);
+	state.speed = vary(80, 60, 10, 150);
 
 	log("Vehicle speed: " + state.speed);
 
-	state.InternalBatteryVoltage = vary(3.5, 5, 2, 6);
+	state.InternalBatteryVoltage = vary(4, 40, 2, 6);
 
 	log("Vehicle speed: " + state.InternalBatteryVoltage);
 
 	state.ODO += 0.01;
-	state.GSMSignalStrength = vary(16, 5, 0, 31);
+	state.GSMSignalStrength = vary(16, 40, 0, 31);
 
-	state.latitude = vary(28.0000, 0.0001, 28.00000, 28.9999);
-	state.longitude = vary(78, 0.00005, 78.00000, 79.00000);
+	state.latitude = vary(28.0000, 0.8, 28.00000, 28.9999);
+	state.longitude = vary(78, 0.8, 78.00000, 79.00000);
 
 	// Make this flip every so often
 	state.status = flip(state.status);

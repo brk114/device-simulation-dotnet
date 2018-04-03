@@ -44,7 +44,7 @@
       "Interval": "00:00:05",
       "MessageTemplate": "{\"status\":\"${status}\",\"speed\":${speed},\"speed_unit\":\"${speed_unit}\",\"ODO\":${ODO},\"ODO_unit\":\"${ODO_unit}\",\"InternalBatteryVoltage\":${InternalBatteryVoltage},\"InternalBatteryVoltage_unit\":\"${InternalBatteryVoltage_unit}\",\"GSMSignalStrength\":\"${GSMSignalStrength}\",\"latitude\":\"${latitude}\",\"longitude\":\"${longitude}\"}",
       "MessageSchema": {
-        "Name": "lightbulb-status;v1",
+        "Name": "wheeler-battery-sensors;v1",
         "Format": "JSON",
         "Fields": {
           "status": "text",
